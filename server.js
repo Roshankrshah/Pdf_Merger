@@ -1,10 +1,11 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
 PORT = 3001;
 
 app.get('/',(req,res)=>{
-    res.send("Hi i m staring new project PDF Merger");
+    res.sendFile(path.join(__dirname,"templates/index.html"));
 })
 
 app.listen(PORT,()=>{
